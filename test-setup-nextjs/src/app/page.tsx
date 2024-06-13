@@ -1,6 +1,10 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 
 export default function Page() {
-  return <React.Fragment>Welcome to Root Home Page</React.Fragment>;
+  return (
+    <Suspense fallback="Loading...">
+      <React.Fragment>Welcome to Root Home Page</React.Fragment>
+    </Suspense>
+  );
 }
